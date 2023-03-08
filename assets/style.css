@@ -1,19 +1,13 @@
 /*general settings start*/
-* body {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
 }
+/*section end*/
 
-:root {
-    --color_1: #000000;
-    --color_2: #006dd3;
-    --color_3: #808080;
-}
-/*general settings end*/
 
-/*conatiner settings*/
+/* used to help determine layout */
 .border {
     border: 1px solid black;
 }
@@ -23,7 +17,7 @@
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -52,30 +46,29 @@
 /* make body full page size depending on viewport */
 body { min-height: 100vh; }
 
-/* style the header */
+/*header styles start*/
 header {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 10px;
+    color: white;
+    font-size: 50px;
     background-color: rgb(75,105,177);
     background-image: linear-gradient(90deg, rgba(75,105,177,1) 13%, rgba(35,77,167,1) 42%, rgba(1,1,105,1) 80%);
 }
 
-
-/* style the heading */
 .heading {
     color:white;
     font-size: 4rem;
     font-weight: bold;
 }
 
-/* style the h1 */
 .h1 {
     font-weight: bold;
     font-size: 3.25rem;
     margin: 2rem auto;
 }
-/* style the h2 */
+
 h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -84,7 +77,15 @@ h2 {
     margin-left: 1%;
 }
 
-/* style the text area where user inputs city name */
+h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+/*section end*/
+
+
+/*style the text area where user inputs city name*/
 #city {
     font-size: 2rem;
     width: 100%;
@@ -96,14 +97,13 @@ h2 {
     padding-left: .5rem;
 }
 
-/* style the search button */
+/*button style start*/
 #search-btn {
     margin-bottom: 2rem;
     background-color: #6699ff;
     color: white;
 }
 
-/* style the history buttons */
 .btn {
     font-size: 2rem;
     width: 100%;
@@ -114,19 +114,19 @@ h2 {
     margin-top: 2rem;
     padding: .7rem 0;
 }
+/*section end*/
 
 /* create the line break in search area */
 hr {
     border-top: .2rem solid rgba(0,0,0, 1);
 }
 
-/* style current weather container */
+/*weather container style start*/
 #current-weather {
     height: 50%;
     border: .1rem solid black;
 }
 
-/* style the list in weather container */
 ul {
     list-style-type: none;
     font-size: 3rem;
@@ -138,12 +138,11 @@ ul {
     margin-left: 1%;
 }
 
-/* style the icon */
 #current-weather-icon {
     filter: drop-shadow(0 0 0.75rem grey);
 }
 
-/* style the uv index background */
+
 .favorable {
     background-color: green;
     font-size: 2rem;
@@ -162,20 +161,12 @@ ul {
     border-radius: .5rem;
 }
 
-/* add padding to the index on UVindex value */
+
 span {
     padding: 0 1.5rem;
     color: white;
 }
 
-/* style the h3 header */
-h3 {
-    font-weight: bold;
-    font-size: 2rem;
-    color: white;
-}
-
-/* style the .card-body */
 .card-body {
     background-color:#00334d;
     height: 20rem;
@@ -187,19 +178,45 @@ h3 {
     justify-content: space-around;
 }
 
-/* style the weather details in the .card-body */
 p {
     font-size: 2rem;
     color: white;
 }
 
-/* style the five-day-header */
 #five-day-header {
     margin-top: 1%;
     margin-bottom: 1%;
 }
 
+/*section end*/
 
 
+/*rescaling start*/
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {}
 
-/**/
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+    .col1 {
+        width: 100%;
+    }
+
+    .col2 {
+        width: 100%;
+    }
+
+    .col3 {
+        width: 100%;
+    }
+
+}
+
+/*Small devices (landscape phones, 630px and up)*/
+@media (max-width: 630px) {
+
+    #current-weather {
+        width: 300px;
+    }
+
+}
+/*section end*/
